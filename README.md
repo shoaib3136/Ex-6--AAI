@@ -1,5 +1,5 @@
-<H3>ENTER YOUR NAME</H3>
-<H3>ENTER YOUR REGISTER NO.</H3>
+<H3>NAME: Shaik Shoaib Nawaz</H3>
+<H3>REGISTER NO: 212222240094</H3>
 <H3>EX. NO.6</H3>
 <H3>DATE:</H3>
 <H1 ALIGN =CENTER>Implementation of Semantic ANalysis</H1>
@@ -17,10 +17,52 @@ Step 5:Iterate through each word in the tokenized text.<br>
 •	Extract synonyms and antonyms using lemma.name() and lemma.antonyms()[0].name() respectively.<br>
 •	Print the unique sets of synonyms and antonyms.
 <H3>Program:</H3>
+```
+!pip install nltk
+import nltk
+#import wordnet
+nltk.download( 'punkt' )
+nltk.download('wordnet')
+from nltk.tokenize import word_tokenize
+nltk.download( 'averaged_perceptron_tagger' )
+sentence=input()
+# Tokenize the sentence into words
+words = word_tokenize(sentence)
+# Identify the parts of speech for each word
+pos_tags= nltk.pos_tag(words)
+# Print the parts of speech
+for word, tag in pos_tags:
+	print(word, tag)
+ from nltk.corpus import wordnet
 
-Insert your code here
+# Identify synonyms and antonyms for each word
+synonyms =[]
+antonyms =[]
+for word in words:
+	for syn in wordnet.synsets(word) :
+		for lemma in syn.lemmas():
+			synonyms . append (lemma . name( ) )
+			if lemma . antonyms():
+				antonyms . append ( lemma. antonyms ( ) [0] . name ( ) )
+# Print the synonyms and antonyms
+print ( "Synonyms : " ,set (synonyms) )
+print ( "Antonyms : " ,set(antonyms) )
+
+```
 
 <H3>Output</H3>
+<H3>Sample Input</H3>
+
+![image](https://github.com/shoaib3136/Ex-6--AAI/assets/117919362/be801971-3ade-448b-9c7f-1241698c8d65)
+
+<H3> Sanple Output</H3>
+![image](https://github.com/shoaib3136/Ex-6--AAI/assets/117919362/f0c48bc8-6d2a-4614-949e-6c7e242b424f)
+
+![image](https://github.com/shoaib3136/Ex-6--AAI/assets/117919362/8a559522-55cc-434b-8a01-8698ccbb484c)
+
+
+
+
 
 Show your results here
 
