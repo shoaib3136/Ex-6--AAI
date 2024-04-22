@@ -3,9 +3,12 @@
 <H3>EX. NO.6</H3>
 <H3>DATE:</H3>
 <H1 ALIGN =CENTER>Implementation of Semantic ANalysis</H1>
-<H3>Aim: to perform Parts of speech identification and Synonym using Natural Language Processing (NLP) techniques. </H3> 
+
+## Aim: 
+	To perform Parts of speech identification and Synonym using Natural Language Processing (NLP) techniques. </H3> 
  <BR>
-<h3>Algorithm:</h3>
+ 
+## Algorithm:
 Step 1: Import the nltk library.<br>
 Step 2: Download the 'punkt', 'wordnet', and 'averaged_perceptron_tagger' resources.<br>
 Step 3:Accept user input for the text.<br>
@@ -16,7 +19,8 @@ Step 5:Iterate through each word in the tokenized text.<br>
 •	For each verb , iterate through its synsets (sets of synonyms) using wordnet.synsets(word).<br>
 •	Extract synonyms and antonyms using lemma.name() and lemma.antonyms()[0].name() respectively.<br>
 •	Print the unique sets of synonyms and antonyms.
-<H3>Program:</H3>
+
+## Program:
 ```
 !pip install nltk
 import nltk
@@ -50,21 +54,18 @@ print ( "Antonyms : " ,set(antonyms) )
 
 ```
 
-<H3>Output</H3>
-<H3>Sample Input</H3>
+## Output
+i.) Sample Input
 
 ![image](https://github.com/shoaib3136/Ex-6--AAI/assets/117919362/be801971-3ade-448b-9c7f-1241698c8d65)
 
-<H3> Sanple Output</H3>
+ii.) Sample Output
+	
 ![image](https://github.com/shoaib3136/Ex-6--AAI/assets/117919362/f0c48bc8-6d2a-4614-949e-6c7e242b424f)
 
-![image](https://github.com/shoaib3136/Ex-6--AAI/assets/117919362/8a559522-55cc-434b-8a01-8698ccbb484c)
+![image](https://github.com/shoaib3136/Ex-6--AAI/assets/117919362/096f3abf-59db-418d-ba13-f52af2f25471)
 
 
 
-
-
-Show your results here
-
-<H3>Result:</H3>
+## Result:
 Thus ,the program to perform the Parts of Speech identification and Synonymis executed sucessfully.
